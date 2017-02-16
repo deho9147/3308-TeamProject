@@ -1,4 +1,4 @@
-# Title Here
+# Title
 Mech VR
 
 ### Team Members
@@ -24,6 +24,9 @@ We only have access to one VR kit which means testing may be a challenege.
 Finding or creating assets will be a challenge.
 ## Mitigation Strategy
 
+Try to find times where we can get together and all have access to the VR kit.
+By being together we can also learn from each other on how the hardware for
+VR works.
 
 ## Requirements
 
@@ -50,3 +53,4 @@ Agile
 
 ## Project Tracking
 Trello
+Link to project tracking: https://trello.com/invite/b/GF9Ykwvu/3ecd6eb46df7eb822c84377fbe6618ea/mech-vr-group
