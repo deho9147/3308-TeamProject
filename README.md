@@ -1,5 +1,4 @@
-# Title
-Mech VR
+# Avalon
 
 ### Team Members
 Derek Holland (deho9147)
@@ -11,7 +10,8 @@ Bryce Wilson (Zunawe)
 Jesse Tao (derekbj)
 
 ## Description
-Simulate the use of a mech in virtual reality using the availible motion controls. Create a destructable enviroment to use the mech. Be able to fight other mechs in this enviroment. 
+Simulate the use of a mech in virtual reality using the availible motion controls. Create a destructable enviroment to use the mech. Be able to fight other mechs in this enviroment.
+
 ## Vision
 Be a giant mech and fight shit
 
@@ -19,11 +19,9 @@ Be a giant mech and fight shit
 We want to learn more about VR and explore the tools availible for developing games in VR. 
 
 ## Risks
-VR means we have limited experience and the hardware is complicated.
-We only have access to one VR kit which means testing may be a challenege.
-Finding or creating assets will be a challenge.
-## Mitigation Strategy
+VR means we have limited experience and the hardware is complicated. We only have access to one VR kit which means testing may be a challenege. Finding or creating assets will be a challenge.
 
+## Mitigation Strategy
 Try to find times where we can get together and all have access to the VR kit.
 By being together we can also learn from each other on how the hardware for
 VR works.
