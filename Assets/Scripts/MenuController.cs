@@ -24,13 +24,13 @@ public class MenuController : MonoBehaviour {
 		}
 	}
 
-	void Hide(){
+	public void Hide(){
 		menu.alpha = 0f;
 		menu.blocksRaycasts = false;
 		Camera.main.GetComponent<MouseLook>().active = true;
 	}
 
-	void Show(){
+	public void Show(){
 		menu.alpha = 1f;
 		menu.blocksRaycasts = true;
 		Camera.main.GetComponent<MouseLook>().active = false;
