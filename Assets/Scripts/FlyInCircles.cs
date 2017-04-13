@@ -9,23 +9,12 @@ public class FlyInCircles : MonoBehaviour {
     public GameObject Player;
     private int Transformer;
     private int count;
-    private float speed = .5f;
-    void Start()
-    {
-        offset = new Vector3(1,1,1);
-    }
+    private float speed = 60.5f;
 
     // Update is called once per frame
     void Update()
     {
-        if (count == 100){
-            Transformer = 1;
-        }
-        else if (count == 200){
-            Transformer = -1;
-            count = 0;
-        }
-            transform.position = Player.transform.position + offset*Transformer*speed;
-            count = count + 1;
+        transform.Rotate(0,.5f,0);
+       transform.position += transform.forward * Time.deltaTime * speed;
     }
 }
