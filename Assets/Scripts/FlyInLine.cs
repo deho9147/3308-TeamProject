@@ -10,14 +10,13 @@ public class FlyInLine : MonoBehaviour {
     private int Transformer;
     private int count;
     private float speed = .5f;
-    void Start()
-    {
+    void Start(){
         offset = new Vector3(1,1,1);
+        count = 0;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         if (count == 100){
             Transformer = 1;
         }
@@ -25,7 +24,7 @@ public class FlyInLine : MonoBehaviour {
             Transformer = -1;
             count = 0;
         }
-            transform.position = Player.transform.position + offset*Transformer*speed;
-            count = count + 1;
+        gameObject.transform.position = gameObject.transform.position + offset*Transformer*speed;
+        count = count + 1;
     }
 }
