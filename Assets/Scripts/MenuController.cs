@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour {
 
+	public Camera attachedCamera;
 	private CanvasGroup menu;
 	
 	// Use this for initialization
@@ -22,6 +23,9 @@ public class MenuController : MonoBehaviour {
 				Show();
 			}
 		}
+
+		gameObject.transform.position = attachedCamera.transform.position + attachedCamera.transform.forward * 10;
+		gameObject.transform.LookAt(attachedCamera.transform, Vector3.up);
 	}
 
 	public void Hide(){
