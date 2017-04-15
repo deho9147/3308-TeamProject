@@ -26,6 +26,7 @@ public class MenuController : MonoBehaviour {
 
 		gameObject.transform.position = attachedCamera.transform.position + attachedCamera.transform.forward * 10;
 		gameObject.transform.LookAt(attachedCamera.transform, Vector3.up);
+		gameObject.transform.Rotate(Vector3.up * 180);
 	}
 
 	public void Hide(){
