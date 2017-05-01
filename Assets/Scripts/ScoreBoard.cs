@@ -19,6 +19,11 @@ public class ScoreBoard : MonoBehaviour {
         scoreText.text = ("Score: " + score);
     }
 
+    public void SubtractPoints(int pointLost)
+    {
+        score -= pointLost;
+        scoreText.text = ("Score: " + score);
+    }
     void allGood()
     {
         if(score >= targetScore)
