@@ -4,14 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Towardsplayerscript : MonoBehaviour {
-    public Transform player;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.GetComponent<NavMeshAgent>() .destination = player.position;
+    public Transform playerLoc;
+
+	void Update(){
+        transform.GetComponent<NavMeshAgent>().destination = playerLoc.position;
 	}
 }

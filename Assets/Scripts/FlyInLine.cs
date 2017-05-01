@@ -2,29 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Behavior that forces an object to move in straight lines in a pattern.
+ */
 public class FlyInLine : MonoBehaviour {
 
-    // Use this for initialization
     private Vector3 offset;
-    public GameObject Player;
-    private int Transformer;
+    private int transformer;
     private int count;
     private float speed = .5f;
+
+    /**
+     * When the scene is loaded, Start is called to reset the pattern.
+     */
     void Start(){
         offset = new Vector3(1,1,1);
         count = 0;
     }
 
-    // Update is called once per frame
+    /**
+     * Each frame, move forward a speed. Will change direction every 100 frames.
+     */
     void Update(){
         if (count == 100){
-            Transformer = 1;
+            transformer = 1;
         }
         else if (count == 200){
-            Transformer = -1;
+            transformer = -1;
             count = 0;
         }
-        gameObject.transform.position = gameObject.transform.position + offset*Transformer*speed;
+        gameObject.transform.position = gameObject.transform.position + offset*transformer*speed;
         count = count + 1;
     }
 }
