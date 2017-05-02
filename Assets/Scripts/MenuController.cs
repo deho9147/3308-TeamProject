@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 /**
  * Controls the menu in the main world. Places the menu in a useful location relative to the camera and disables mouselook for the camera when the menu is active.
@@ -8,9 +9,12 @@ using UnityEngine;
 public class MenuController : MonoBehaviour {
 
 	public Camera attachedCamera;	/**< The camera that the menu follows around. */
-
+	public GameObject leftControl;
+	public GameObject rightControl;
 	private CanvasGroup menu;
 	private Vector2 cameraXZLook;
+
+
 	
 	/**
 	 * Finds the CanvasGroup to toggle display and hides the menu before the scene is displayed.
@@ -37,7 +41,7 @@ public class MenuController : MonoBehaviour {
 		// Sets the position of the menu to be 10 units in front of the camera in the horizontal plane, and sets it to the same elevation.
 		cameraXZLook.Set(attachedCamera.transform.forward.x, attachedCamera.transform.forward.z);
 		cameraXZLook.Normalize();
-		cameraXZLook *= 10;
+		cameraXZLook *= 5;
 		gameObject.transform.position = new Vector3(attachedCamera.transform.position.x + cameraXZLook.x, attachedCamera.transform.position.y, attachedCamera.transform.position.z + cameraXZLook.y);
 		gameObject.transform.LookAt(attachedCamera.transform, Vector3.up);
 		gameObject.transform.Rotate(Vector3.up * 180);
@@ -49,7 +53,9 @@ public class MenuController : MonoBehaviour {
 	public void Hide(){
 		menu.alpha = 0f;
 		menu.blocksRaycasts = false;
-		Camera.main.GetComponent<MouseLook>().active = true;
+		//Camera.main.GetComponent<MouseLook>().active = true;
+		leftControl.GetComponent<VRTK_TouchpadMovement>().active = true;
+		rightControl.GetComponent<VRTK_TouchpadMovement>().active = true;
 	}
 
 	/**
@@ -58,6 +64,9 @@ public class MenuController : MonoBehaviour {
 	public void Show(){
 		menu.alpha = 1f;
 		menu.blocksRaycasts = true;
-		Camera.main.GetComponent<MouseLook>().active = false;
+		//Camera.main.GetComponent<MouseLook>().active = false;
+		leftControl.GetComponent<VRTK_TouchpadMovement>().active = false;
+		rightControl.GetComponent<VRTK_TouchpadMovement>().active = false;
+
 	}
 }

@@ -51,6 +51,8 @@ namespace VRTK
     [Obsolete("`VRTK_TouchpadMovement` has been replaced with `VRTK_TouchpadControl`. This script will be removed in a future version of VRTK.")]
     public class VRTK_TouchpadMovement : MonoBehaviour
     {
+		public bool active;
+
         /// <summary>
         /// Movement types that can be performed by the vertical axis.
         /// </summary>
