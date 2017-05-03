@@ -11,14 +11,36 @@ public class DestructionControl : MonoBehaviour {
 	 * The object to be used as rubble. To be set in the Unity editor.
 	 */
 	public GameObject rubble;
+	public int health = 3;
 	
 	/**
-	 * At each frame, if a trigger occurs, create the rubble object and destroy this.
+	 * When other object is struck by object defined by col.gameObject.name, creates rubble 
 	 */
-	void Update(){
-		if(Input.GetKey(KeyCode.Space)){
-			Instantiate(rubble, transform.position, transform.rotation);
-			Destroy(gameObject);
-		}
+	 
+	
+	void OnCollisionEnter(Collision col)
+	{
+			if(col.gameObject.name == "jeep")
+			{
+				health--;
+			}
+			if(col.gameObject.name == "jeep" && health == 1)
+			{
+				rubble.transform.localScale = 0.125f*(gameObject.transform.localScale);
+				Instantiate(rubble, transform.position, transform.rotation);
+				Destroy(col.gameObject);
+				Destroy(gameObject);
+				Destroy(rubble);
+			}
 	}
+	
+	/** Used to test destroying objects by just pressing the space bar*/
+	
+	/**void Update () {
+ 		if(Input.GetKey(KeyCode.Space)){
+ 			Instantiate(rubble, transform.position, transform.rotation);
+ 			Destroy(gameObject);
+ 	}
+ 	}
+	*/
 }
