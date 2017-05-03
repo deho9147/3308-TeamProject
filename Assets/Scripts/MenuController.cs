@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour {
 	public Camera attachedCamera;	/**< The camera that the menu follows around. */
 	public GameObject leftControl;
 	public GameObject rightControl;
+	public GameObject rightControlControl;
 	private CanvasGroup menu;
 	private Vector2 cameraXZLook;
 
@@ -56,6 +57,8 @@ public class MenuController : MonoBehaviour {
 		//Camera.main.GetComponent<MouseLook>().active = true;
 		leftControl.GetComponent<VRTK_TouchpadMovement>().active = true;
 		rightControl.GetComponent<VRTK_TouchpadMovement>().active = true;
+		rightControl.GetComponent<VRTK_UIPointer>().active = false;
+		GameObject.Find("RightController").GetComponent<VRTK_StraightPointerRenderer>().enabled = false;
 	}
 
 	/**
@@ -67,6 +70,7 @@ public class MenuController : MonoBehaviour {
 		//Camera.main.GetComponent<MouseLook>().active = false;
 		leftControl.GetComponent<VRTK_TouchpadMovement>().active = false;
 		rightControl.GetComponent<VRTK_TouchpadMovement>().active = false;
-
+		rightControl.GetComponent<VRTK_UIPointer>().active = true;
+		GameObject.Find("RightController").GetComponent<VRTK_StraightPointerRenderer>().enabled = true;
 	}
 }

@@ -40,6 +40,8 @@ namespace VRTK
     /// </example>
     public class VRTK_UIPointer : MonoBehaviour
     {
+
+		public bool active;
         /// <summary>
         /// Methods of activation.
         /// </summary>
@@ -260,30 +262,23 @@ namespace VRTK
         /// <returns>Returns true if the ui pointer should be currently active.</returns>
         public virtual bool PointerActive()
         {
-            if (activationMode == ActivationMethods.AlwaysOn || autoActivatingCanvas != null)
-            {
-                return true;
-            }
-            else if (activationMode == ActivationMethods.HoldButton)
-            {
-                return controller.IsButtonPressed(activationButton);
-            }
-            else
-            {
-                pointerClicked = false;
-                if (controller.IsButtonPressed(activationButton) && !lastPointerPressState)
-                {
-                    pointerClicked = true;
-                }
-                lastPointerPressState = controller.IsButtonPressed(activationButton);
+			if (activationMode == ActivationMethods.AlwaysOn || autoActivatingCanvas != null) {
+				return true;
+			} else if (activationMode == ActivationMethods.HoldButton) {
+				return controller.IsButtonPressed (activationButton);
+			} else {
+				pointerClicked = false;
+				if (controller.IsButtonPressed (activationButton) && !lastPointerPressState) {
+					pointerClicked = true;
+				}
+				lastPointerPressState = controller.IsButtonPressed (activationButton);
 
-                if (pointerClicked)
-                {
-                    beamEnabledState = !beamEnabledState;
-                }
+				if (pointerClicked) {
+					beamEnabledState = !beamEnabledState;
+				}
 
-                return beamEnabledState;
-            }
+				return beamEnabledState;
+			}
         }
 
         /// <summary>

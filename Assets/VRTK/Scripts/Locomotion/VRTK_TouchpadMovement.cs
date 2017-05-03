@@ -429,15 +429,16 @@ namespace VRTK
 
         private void Move()
         {
-            var deviceDirector = VRTK_DeviceFinder.DeviceTransform(deviceForDirection);
-            if (deviceDirector)
-            {
-                var movement = deviceDirector.forward * movementSpeed * Time.deltaTime;
-                var strafe = deviceDirector.right * strafeSpeed * Time.deltaTime;
-                float fixY = playArea.position.y;
-                playArea.position += (movement + strafe);
-                playArea.position = new Vector3(playArea.position.x, fixY, playArea.position.z);
-            }
+			if (active) {
+				var deviceDirector = VRTK_DeviceFinder.DeviceTransform (deviceForDirection);
+				if (deviceDirector) {
+					var movement = deviceDirector.forward * movementSpeed * Time.deltaTime;
+					var strafe = deviceDirector.right * strafeSpeed * Time.deltaTime;
+					float fixY = playArea.position.y;
+					playArea.position += (movement + strafe);
+					playArea.position = new Vector3 (playArea.position.x, fixY, playArea.position.z);
+				}
+			}
         }
 
         private void Warp(bool blink = false, bool horizontal = false)
