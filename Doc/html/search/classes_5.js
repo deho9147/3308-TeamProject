@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scoreboard',['ScoreBoard',['../class_score_board.html',1,'']]]
+  ['quitonclick',['QuitOnClick',['../class_quit_on_click.html',1,'']]]
 ];

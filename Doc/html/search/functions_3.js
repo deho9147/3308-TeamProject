@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['show',['Show',['../class_menu_controller.html#a79122833fdf6300323987055491f23bb',1,'MenuController']]]
+  ['quit',['Quit',['../class_quit_on_click.html#a2ae4a389fc44a04218d7a1353bcc870a',1,'QuitOnClick']]]
 ];

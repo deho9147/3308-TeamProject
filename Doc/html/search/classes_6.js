@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['towardsplayerscript',['Towardsplayerscript',['../class_towardsplayerscript.html',1,'']]]
+  ['scoreboard',['ScoreBoard',['../class_score_board.html',1,'']]]
 ];

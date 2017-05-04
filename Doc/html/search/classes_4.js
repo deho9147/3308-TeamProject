@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quitonclick',['QuitOnClick',['../class_quit_on_click.html',1,'']]]
+  ['menucontroller',['MenuController',['../class_menu_controller.html',1,'']]],
+  ['mouselook',['MouseLook',['../class_mouse_look.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destructioncontrol',['DestructionControl',['../class_destruction_control.html',1,'']]]
+  ['controllerbuttons',['ControllerButtons',['../class_controller_buttons.html',1,'']]]
 ];

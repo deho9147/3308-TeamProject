@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['loadsceneonclick',['LoadSceneOnClick',['../class_load_scene_on_click.html',1,'']]]
+  ['flyincircles',['FlyInCircles',['../class_fly_in_circles.html',1,'']]],
+  ['flyinline',['FlyInLine',['../class_fly_in_line.html',1,'']]],
+  ['followpath',['FollowPath',['../class_follow_path.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quit',['Quit',['../class_quit_on_click.html#a2ae4a389fc44a04218d7a1353bcc870a',1,'QuitOnClick']]]
+  ['no_5fgravity',['No_Gravity',['../class_disable___gravity.html#a95392b9d6bf53a36dba8da6848eb800c',1,'Disable_Gravity']]]
 ];
